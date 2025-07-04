@@ -2,7 +2,7 @@
 
 **StackGenie** is an open-source AI-powered fullstack framework that generates complete web applications from a single natural language prompt.
 
-It combines the flexibility of modern frontend tools (React/Vue + Tailwind CSS), backend frameworks (Node.js + Express for MVP), and the power of OpenAI to deliver an instant and intelligent developer experience.
+It combines the flexibility of modern frontend tools (React + Tailwind CSS), backend frameworks (Node.js + Express for MVP), and the power of OpenAI to deliver an instant and intelligent developer experience.
 
 ---
 
