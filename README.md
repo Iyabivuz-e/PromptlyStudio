@@ -75,7 +75,7 @@ We welcome contributions from everyone!
 4. Push to your fork
 5. Create a Pull Request
 
-Join the discussion on GitHub or our [community Slack/Discord group](#) (coming soon).
+Join the discussion on GitHub or our [community on Discord group](https://discord.gg/rTpsHSGS)
 
 ---
 
