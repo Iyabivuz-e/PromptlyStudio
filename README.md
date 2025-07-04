@@ -42,7 +42,7 @@ We’re starting with a strong community from **React Rwanda** and opening it up
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer       | Stack                      |
 |-------------|----------------------------|
