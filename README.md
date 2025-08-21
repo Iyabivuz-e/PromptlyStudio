@@ -1,94 +1,188 @@
-#  StackGenie
 
-**StackGenie** is an open-source AI-powered fullstack framework that generates complete web applications from a single natural language prompt.
 
-It combines the flexibility of modern frontend tools (React + Tailwind CSS), backend frameworks (Node.js + Express for MVP), and the power of OpenAI to deliver an instant and intelligent developer experience.
+# Promptly Studio
 
----
-
-## Features (MVP)
-
-- **AI-Prompt Project Generation**  
-  Describe your idea in plain English (e.g. "An app with login and dashboard") and get full code in seconds.
-
--  **Backend Scaffolding**  
-  Generates backend using Node.js + Express with user authentication out of the box.
-
-- **Frontend Generator**  
-  Supports React or Vue 3, with Tailwind CSS or Material UI styling.
-
--  **CLI Tool**  
-  Easily initialize a project with `stackgenie create`.
-
--  **Modular Components**  
-  Reusable components and features: Auth, Dashboard, Forms, etc.
+**Promptly Studio** is an all-in-one platform that transforms text prompts or Figma/Adobe XD designs into fully functional React applications with TailwindCSS. It comes with a **local component library**, **zero-configuration setup**, and a **powerful integrated code editor**.
 
 ---
 
-##  Target Users
+## 🚀 Project Vision
 
-- Developers and makers who want to build fast
-- Tech communities and open-source contributors
-- African innovators aiming to create tools for the continent
-- Educators and bootcamp learners
-
----
-
-##  Community Vision
-
-> StackGenie is more than a framework — it's a community-powered initiative to empower developers across Africa with modern, intelligent dev tools.
-
-We’re starting with a strong community from **React Rwanda** and opening it up to developers around the continent and beyond.
+* Transform a **text prompt** → complete React application (components, styles, logic).
+* Transform a **Figma / Adobe XD design** → production-ready React app.
+* Provide a **community component library** (Rwanda Dev Community UI).
+* Offer a **zero-configuration experience**: everything works out-of-the-box (templates, dependencies, editor).
 
 ---
 
-## Tech Stack
+## 🎯 Objectives
 
-| Layer       | Stack                      |
-|-------------|----------------------------|
-| Frontend    | React or Vue 3, Tailwind CSS |
-| Backend     | Node.js, Express.js        |
-| AI Engine   | OpenAI GPT-4 (API)         |
-| Tooling     | CLI-first (Web UI later)   |
-
----
-
-##  Roadmap (Phase 1)
-
-- [x] MVP Definition and Core Team Setup
-- [ ] Project Initialization via CLI
-- [ ] Basic Prompt-to-Code Integration with GPT-4
-- [ ] Frontend Template Generator
-- [ ] Backend CRUD Generator (Node/Express)
-- [ ] Modular Components (Auth, Dashboard, etc.)
-- [ ] Documentation and Examples
+1. Generate front-end applications without complex setup.
+2. Provide an **integrated code editor** for editing, previewing, and exporting.
+3. Allow direct import of Figma/XD designs to React + Tailwind code.
+4. Provide a **local component library**.
+5. Facilitate sharing and customization of templates.
 
 ---
 
-##  Contributing
+## 🏗 Minimum Viable Product (MVP)
 
-We welcome contributions from everyone!
-
-1. Fork the repo
-2. Create a new branch (`git checkout -b feature/my-feature`)
-3. Commit your changes
-4. Push to your fork
-5. Create a Pull Request
-
-Join the discussion on GitHub or our [community on Discord group](https://discord.gg/rTpsHSGS)
+* Integrated code editor (Monaco Editor).
+* Prompt-to-code generation → React + Tailwind.
+* Figma/XD design import via API.
+* Pre-integrated Rwanda Dev Community UI.
+* Full project export with one-time installation.
 
 ---
 
-## License
+## 🛠 Backend & AI
 
-This project is licensed under the **MIT License** — open for all to use, build, and improve.
-
----
-
-##  Credits & Core Contributors
-
-Built by passionate developers from the React Rwanda community 🇷🇼 and open-source contributors across Africa 🌍
+* **Backend:** Node.js + Express
+* **Database:** Supabase or Firebase
+* **AI & Code Generation:** OpenAI / Anthropic API
+* **Design Parsing:** Figma API, html-to-jsx parser
+* **Dev Tools:** GitHub Actions, Docker
 
 ---
 
-> Prompt. Generate. Build. That's the StackGenie magic. 
+## 📅 Project Timeline
+
+| Phase   | Duration | Description                                                              |
+| ------- | -------- | ------------------------------------------------------------------------ |
+| Phase 1 | 2 weeks  | Design & Architecture                                                    |
+| Phase 2 | 3 weeks  | Technical foundation (Vite, Tailwind, editor shell, generation pipeline) |
+| Phase 3 | 4 weeks  | Prompt-based generation                                                  |
+| Phase 4 | 4 weeks  | Figma/XD design import                                                   |
+| Phase 5 | 3 weeks  | Packaging & Marketplace                                                  |
+| Phase 6 | 2 weeks  | Testing & Launch                                                         |
+
+---
+
+## 💻 Frontend Technologies
+
+* React.js
+* TailwindCSS
+* Framer Motion
+* Vite
+
+---
+
+## 📦 Quickstart / Installation
+
+```bash
+git clone https://github.com/yourusername/promptly-studio.git
+cd promptly-studio
+corepack enable
+pnpm i
+pnpm dev        # Start web UI
+pnpm dev:api    # Start backend API
+```
+
+Create `.env` from `.env.example` and fill your API keys.
+
+---
+
+## 🏗 Monorepo Structure (pnpm workspaces)
+
+```
+---
+
+## 🏗 Monorepo Structure 
+```
+```
+promptly-studio/
+├─ apps/
+│  ├─ web/                    # React + Vite app (Editor + Preview + Export)
+│  └─ api/                    # Express API (codegen, Figma import, export)
+├─ packages/
+│  ├─ ui/                     # Rwanda Dev Community UI components
+│  ├─ editor/                 # Monaco editor wrapper + preview runtime
+│  ├─ codegen/                # Prompt → React + Tailwind pipeline
+│  ├─ design-importer/        # Figma/XD → React converter
+│  └─ common/                 # Shared types, utils, schema validators
+├─ .github/
+│  └─ workflows/ci.yml        # Lint + Typecheck + Build + Test
+├─ docker/
+│  ├─ api.Dockerfile
+│  └─ web.Dockerfile
+├─ .env.example
+├─ package.json
+├─ pnpm-workspace.yaml
+├─ README.md
+├─ CONTRIBUTING.md
+├─ CODE_OF_CONDUCT.md
+├─ LICENSE (MIT)
+└─ .gitignore
+```
+
+---
+
+## 🔧 Architecture Overview
+
+* **apps/web** → React + Vite (UI, editor, preview)
+* **apps/api** → Express API (codegen, design import)
+* **packages/editor** → Monaco editor wrapper
+* **packages/codegen** → Prompt → React + Tailwind pipeline
+* **packages/design-importer** → Figma/XD → React
+* **packages/ui** → Local component library
+* **packages/common** → Shared types & utils
+
+---
+
+## ⚡ Scripts
+
+* `pnpm dev` → start web UI
+* `pnpm dev:api` → start API backend
+* `pnpm build` → build all packages
+* `pnpm lint` → lint all packages
+* `pnpm typecheck` → TypeScript type check
+* `pnpm test` → run tests
+
+---
+
+## 🤝 Contribution Guidelines
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for instructions on forking, coding, testing, and PRs.
+
+---
+
+## 📜 Code of Conduct
+
+See [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md). Please be respectful and collaborative.
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** – see [`LICENSE`](LICENSE) for details.
+
+---
+
+## 🗺 Roadmap
+
+1. **Phase 1 – Design & Architecture**: data model, UX flows, component library tokens
+2. **Phase 2 – Technical Foundation**: Monaco integration, export to ZIP, API scaffolding
+3. **Phase 3 – Prompt Generation**: templates, model adapters, HTML → JSX
+4. **Phase 4 – Figma/XD Import**: API fetch, node mapping, styles
+5. **Phase 5 – Packaging & Marketplace**: component registry, versioning
+6. **Phase 6 – Testing & Launch**: E2E tests, docs site
+
+---
+
+## ⚡ Zero‑Config Developer Experience
+
+* Prewired paths `@promptly/*` from web → packages
+* Single `pnpm i` installs everything
+* `pnpm dev` starts the web UI; `pnpm dev:api` starts the API
+* Minimal `.env` setup for MVP; advanced features require API keys
+
+---
+
+## 📝 Next Steps
+
+1. Initialize a GitHub repository and paste these files.
+2. Run `corepack enable && pnpm i`.
+3. Duplicate `.env.example` → `.env` and fill API keys.
+4. Start `pnpm dev` + `pnpm dev:api`.
+5. Open PRs for new templates, Figma node mapping, or export enhancements.
+
